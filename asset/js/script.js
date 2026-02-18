@@ -1,8 +1,8 @@
 const menuData = [
-    { id: 1, cat: "Pollos", nom: "Economico Broaster", desc: "1 Presa de pollo ala o pecho, papas fritas, porcionde arroz.", precio: 18, img: "../../images/m1.png" },
-    { id: 2, cat: "Pollos", nom: "Economico Brasa", desc: "1 Presa de pollo pecho o pecho, papas fritas, porcionde arroz.", precio: 18, img: "../../images/m2.png" },
-    { id: 3, cat: "Pollos", nom: "Cuarto Broaster", desc: "Cuarto Presa de pollo pecho, papas fritas, porcionde arroz.", precio: 28, img: "../../images/m3.png" },
-    { id: 4, cat: "Pollos", nom: "Cuarto Brasa", desc: "Cuarto Presa de pollo pecho, papas fritas, porcionde arroz.", precio: 28, img: "../../images/m4.png" },
+    { id: 1, cat: "Pollos", nom: "Economico Broaster", desc: "1 Presa de pollo ala o pecho, papas fritas, porción de arroz.", precio: 18, img: "../../images/m1.png" },
+    { id: 2, cat: "Pollos", nom: "Economico Brasa", desc: "1 Presa de pollo pecho o pecho, papas fritas, porción de arroz.", precio: 18, img: "../../images/m2.png" },
+    { id: 3, cat: "Pollos", nom: "Cuarto Broaster", desc: "Cuarto Presa de pollo pecho, papas fritas, porción de arroz.", precio: 28, img: "../../images/m3.png" },
+    { id: 4, cat: "Pollos", nom: "Cuarto Brasa", desc: "Cuarto Presa de pollo pecho, papas fritas, porción de arroz.", precio: 28, img: "../../images/m4.png" },
     { id: 5, cat: "Pollos", nom: "Cuarto 3 Presas Broaster", desc: "Cuarto 3 Presas de pollo pecho, papas fritas, porcion de arroz.", precio: 35, img: "../../images/m5.png" },
     { id: 6, cat: "Pollos", nom: "Cuarto 3 Presas Brasa", desc: "Cuarto 3 Presas de pollo pecho, papas fritas, porcion de arroz.", precio: 35, img: "../../images/m6.png" },
     { id: 7, cat: "Pollos", nom: "Pollo Entero Broaster C/G", desc: "Pollo entero.", precio: 98, img: "../../images/m7.png" },
@@ -253,3 +253,4 @@ function animateCart() {
 
 
 setInterval(verificarHorario, 60000);
+
