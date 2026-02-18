@@ -11,7 +11,7 @@ const menuData = [
     { id: 10, cat: "Pollos", nom: "Pollo Entero Brasa S/G", desc: "Pollo entero sin guarnición.", precio: 78, img: "images/m10.png" },
     { id: 11, cat: "Salchipapas", nom: "Salchipapa Simple", desc: "Rodajas de chorizo, papas fritas.", precio: 18, img: "images/m11.png" },
     { id: 12, cat: "Salchipapas", nom: "Salchipapa Super", desc: "Rodajas de chorizo, papas fritas, huevo.", precio: 22, img: "images/m12.png" },
-    { id: 13, cat: "Salchipapas", nom: "Salchipollo Broaster", desc: "Presa de pollo, rodajas de chorizo, papas fritas, huevo.", precio: 27, img: "images/m13.png" },
+    { id: 13, cat: "Salchipapas", nom: "Salchipollo Broaster", desc: "Presa de pollo, rodajas de chorizo, papas fritas.", precio: 27, img: "images/m13.png" },
     { id: 14, cat: "Salchipapas", nom: "Milanesa Clasica", desc: "Milanesa de pollo, porción de arroz, platano frito, papas fritas.", precio: 20, img: "images/m14.png" },
     { id: 15, cat: "Hambueguesas", nom: "Hamburguesa Simple", desc: "Carne, quezo, tomate, lechuga, cebolla, papas fritas.", precio: 18, img: "images/m15.png" },
     { id: 16, cat: "Hambueguesas", nom: "Hamburguesa Super", desc: "Carne, quezo, tomate, lechuga, cebolla, papas fritas.", precio: 22, img: "images/m16.png" },
@@ -253,5 +253,6 @@ function animateCart() {
 
 
 setInterval(verificarHorario, 60000);
+
 
 
