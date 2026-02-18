@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <title>Rosty Pollos | Menú Virtual </title>
+    <meta name="description" content="Disfruta del mejor sabor en Rosty Pollos. Pide online nuestros pollos a la brasa, hamburguesas, salchipapas y piques. Delivery rápido y calidad garantizada.">
+    <meta name="keywords" content="Rosty Pollos, menú virtual, pollos a la brasa, hamburguesas, delivery, comida rápida, salchipapas, piques">
+    <meta name="author" content="Rosty Pollos">
+    <link rel="canonical" href="https://rostypollos.salinastech.com/"> <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rostypollos.salinastech.com/">
+    <meta property="og:title" content="Rosty Pollos | Menú Virtual">
+    <meta property="og:description" content="¡Haz tu pedido online ahora! El sabor que te encanta, a un solo clic de distancia.">
+    <meta property="og:image" content="https://rostypollos.salinastech.com/images/banner.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://rostypollos.salinastech.com">
+    <meta property="twitter:title" content="Rosty Pollos | Menú Virtual">
+    <meta property="twitter:description" content="Pide tus pollos, hamburguesas y más desde nuestro menú interactivo.">
+    <meta property="twitter:image" content="https://rostypollos.com/images/banner.png">
+
+    <link rel="icon" type="image/png" href="icon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="icon/favicon.svg" />
+    <link rel="shortcut icon" href="icon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Rosty Pollos" />
+    <link rel="manifest" href="icon/site.webmanifest" />
+
+    <meta name="theme-color" content="#ff0000"> <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Rosty Pollos",
+      "image": "https://www.rostypollos.com/images/image.png",
+      "@id": "https://rostypollos.salinastech.com",
+      "url": "https://rostypollos.salinastech.com",
+      "telephone": "+591XXXXXXXXX", 
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Dirección del local",
+        "addressLocality": "Ciudad",
+        "addressCountry": "BO"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "11:00",
+        "closes": "23:59"
+      },
+      "menu": "https://rostypollos.salinastech.com",
+      "servesCuisine": ["Pollo a la brasa", "Hamburguesas", "Comida rápida"],
+      "priceRange": "Bs. 20 - Bs. 100"
+    }
+    </script>
+</head>
+
+<body>
+
+    <div class="header-container">
+        <div class="banner-img" style="background-image: url('images/banner.png');">
+        </div>
+        <div class="store-profile">
+            <div class="logo-wrapper">
+                <img src="images/image.png" alt="Rosty Pollos">
+            </div>
+            <div class="store-details">
+                <h1>Rosty Pollos</h1>
+                <div class="meta-info">
+                    <span id="store-status" class="status-open">Verificando...</span>
+                    <span class="delivery-time">
+                        <i class="far fa-clock"></i> 11:00 am - 24:00 pm
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="category-tabs">
+        <div class="tabs-scroll">
+            <button class="tab active">Pollos</button>
+            <button class="tab">Salchipapas</button>
+            <button class="tab">Hambueguesas</button>
+            <button class="tab">Piqueos</button>
+            <button class="tab">Carne</button>
+            <button class="tab">Porciones</button>
+        </div>
+    </nav>
+
+    <main class="menu-section">
+        <h2 class="category-title">Pollo</h2>
+        <div id="product-list"></div>
+    </main>
+
+    <div class="footer-cart" id="footer-cart" onclick="openOrderSummary()" style="display: none; cursor: pointer;">
+        <div class="cart-content">
+            <div class="cart-left">
+                <div class="cart-badge">
+                    <i class="fas fa-utensils"></i>
+                    <span id="cart-qty">0</span>
+                </div>
+                <div class="cart-text">
+                    <span class="view-order">Ver mi pedido</span>
+                    <span class="total-price">Bs. <span id="cart-total">0</span></span>
+                </div>
+            </div>
+            <i class="fas fa-chevron-right"></i>
+        </div>
+    </div>
+
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <h2 class="modal-title">Resumen del pedido</h2>
+
+            <div class="order-table-container">
+                <table class="order-table">
+                    <thead>
+                        <tr>
+                            <th>Cantidad</th>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-items-list"></tbody>
+                </table>
+            </div>
+
+            <div class="totals-section">
+                <div class="total-row">
+                    <span>Subtotal Bs.</span>
+                    <span id="subtotal-val">0</span>
+                </div>
+                <div class="total-row">
+                    <span>Descuento Bs.</span>
+                    <span>0</span>
+                </div>
+                <div class="total-row main-total">
+                    <span>Total Bs.</span>
+                    <span id="final-total-val">0</span>
+                </div>
+            </div>
+
+            <button class="continue-btn" onclick="irAFormulario()">CONTINUAR</button>
+        </div>
+    </div>
+
+    <div id="data-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Llena tus datos</h2>
+                <span class="close" onclick="closeDataModal()">&times;</span>
+            </div>
+
+            <div class="form-group">
+                <label>Forma de entrega</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="entrega" value="Delivery" checked onchange="toggleDelivery(true)">
+                        Delivery
+                    </label>
+                    <label>
+                        <input type="radio" name="entrega" value="Recojo" onchange="toggleDelivery(false)"> Recojo
+                    </label>
+                </div>
+            </div>
+
+            <div id="delivery-section">
+                <div class="form-group">
+                    <label>Dirección de entrega</label>
+                    <button class="gps-btn" onclick="getLocation()">📍 Usar mi ubicación GPS</button>
+                    <input type="text" id="direccion" placeholder="Calle, número, referencia...">
+                </div>
+                <div id="map" style="height: 200px; background: #eee; margin-bottom: 15px; border-radius: 8px;">
+                    <p style="text-align:center; padding-top: 80px; color: #666;">Mapa de ubicación</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Mis datos</label>
+                <input type="text" id="nombre-cliente" placeholder="Nombre completo">
+                <input type="tel" id="telefono-cliente" placeholder="Número de celular">
+            </div>
+
+            <div class="form-group">
+                <label>Método de pago</label>
+                <select id="metodo-pago">
+                    <option value="Pago Contraentrega">Pago Contraentrega</option>
+                    <option value="Pago QR/Transferencia">Pago QR/Transferencia Bancaria</option>
+                </select>
+            </div>
+
+            <button class="confirm-btn" onclick="confirmarPedido()">CONFIRMAR PEDIDO</button>
+            <button class="back-btn" onclick="closeDataModal()">ATRÁS</button>
+        </div>
+    </div>
+
+    <script src="asset/js/script.js"></script>
+</body>
+
+</html>
