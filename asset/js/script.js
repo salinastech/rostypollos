@@ -9,9 +9,9 @@ const menuData = [
     { id: 8, cat: "Pollos", nom: "Pollo Entero Brasa C/G", desc: "Pollo entero.", precio: 98, img: "../../images/m8.png" },
     { id: 9, cat: "Pollos", nom: "Pollo Entero Broaster S/G", desc: "Pollo entero sin guarnición.", precio: 78, img: "../../images/m9.png" },
     { id: 10, cat: "Pollos", nom: "Pollo Entero Brasa S/G", desc: "Pollo entero sin guarnición.", precio: 78, img: "images/m10.png" },
-    { id: 11, cat: "Salchipapas", nom: "Salchipapa Simple", desc: "Rodajas de chorizo, papas fritas,trozos de carne.", precio: 18, img: "images/m11.png" },
-    { id: 12, cat: "Salchipapas", nom: "Salchipapa Super", desc: "Rodajas de chorizo, papas fritas,trozos de carne, huevo.", precio: 22, img: "images/m12.png" },
-    { id: 13, cat: "Salchipapas", nom: "Salchipollo Broaster", desc: "Presa de pollo, rodajas de chorizo, papas fritas,trozos de carne, huevo.", precio: 27, img: "images/m13.png" },
+    { id: 11, cat: "Salchipapas", nom: "Salchipapa Simple", desc: "Rodajas de chorizo, papas fritas.", precio: 18, img: "images/m11.png" },
+    { id: 12, cat: "Salchipapas", nom: "Salchipapa Super", desc: "Rodajas de chorizo, papas fritas, huevo.", precio: 22, img: "images/m12.png" },
+    { id: 13, cat: "Salchipapas", nom: "Salchipollo Broaster", desc: "Presa de pollo, rodajas de chorizo, papas fritas, huevo.", precio: 27, img: "images/m13.png" },
     { id: 14, cat: "Salchipapas", nom: "Milanesa Clasica", desc: "Milanesa de pollo, porción de arroz, platano frito, papas fritas.", precio: 20, img: "images/m14.png" },
     { id: 15, cat: "Hambueguesas", nom: "Hamburguesa Simple", desc: "Carne, quezo, tomate, lechuga, cebolla, papas fritas.", precio: 18, img: "images/m15.png" },
     { id: 16, cat: "Hambueguesas", nom: "Hamburguesa Super", desc: "Carne, quezo, tomate, lechuga, cebolla, papas fritas.", precio: 22, img: "images/m16.png" },
@@ -22,7 +22,7 @@ const menuData = [
     { id: 21, cat: "Piqueos", nom: "2 Alitas 12 Piezas", desc: "Alitas, rodajas de chorizo, papas fritas.", precio: 57, img: "images/m21.png" },
     { id: 22, cat: "Piqueos", nom: "Pipocas de Pollo", desc: "Pipocas de pollo.", precio: 15, img: "images/m22.png" },
     { id: 23, cat: "Carne", nom: "Chuleta de Res + Huevo", desc: "Carne de res, huevo, porción de arroz, papas fritas.", precio: 20, img: "images/m25.png" },
-    { id: 24, cat: "Carne", nom: "Chicharron de pollo", desc: "Chicharron de pollo, papas fritas.", precio: 20, img: "images/m26.png" },
+    { id: 24, cat: "Piqueos", nom: "Chicharron de pollo", desc: "Chicharron de pollo, papas fritas.", precio: 20, img: "images/m26.png" },
     { id: 25, cat: "Porciones", nom: "Porción arroz", desc: "Porción arroz Familiar", precio: 12, img: "images/m27.png" },
     { id: 26, cat: "Porciones", nom: "Porción platano", desc: "Porción platano Familiar", precio: 12, img: "images/m28.png" },
     { id: 27, cat: "Porciones", nom: "Porción papas", desc: "Porción papas Familiar", precio: 12, img: "images/m29.png" }
@@ -253,4 +253,5 @@ function animateCart() {
 
 
 setInterval(verificarHorario, 60000);
+
 
