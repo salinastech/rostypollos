@@ -220,6 +220,10 @@ const menuData = [
 let cart = [];
 
 document.addEventListener("DOMContentLoaded", () => {
+    menuData.forEach(item => {
+        if (item.cat === "Pollos") item.cat = "Pollos";
+    });
+    
     renderMenu("Pollos");
     setupCategoryTabs();
     verificarHorario();
@@ -228,49 +232,49 @@ document.addEventListener("DOMContentLoaded", () => {
 function renderMenu(categoria) {
     const container = document.getElementById("product-list");
     const title = document.querySelector(".category-title");
-
     if (title) title.innerText = categoria;
     
     container.innerHTML = "";
 
     const normalize = (text) => text.toLowerCase().trim().replace(/s$/, "");
     const filtrados = menuData.filter(
-        (item) => normalize(item.cat) === normalize(categoria),
+        (item) => normalize(item.cat) === normalize(categoria)
     );
 
     if (filtrados.length === 0) {
-        container.innerHTML = `<p style="text-align:center; padding:20px;">Próximamente...</p>`;
+        container.innerHTML = `<p style="text-align:center; padding:20px; color:var(--text-muted);">Próximamente...</p>`;
         return;
     }
 
-    let htmlContent = "";
+    const fragment = document.createDocumentFragment();
 
     filtrados.forEach((item) => {
-        htmlContent += `
-            <div class="product-item">
-                <div class="img-placeholder">
-                    <img src="${item.img}" 
-                         class="prod-img" 
-                         alt="${item.nom}" 
-                         loading="lazy" 
-                         decoding="async"
-                         onerror="this.src=''">
+        const productCard = document.createElement("div");
+        productCard.className = "product-item";
+        productCard.innerHTML = `
+            <div class="img-placeholder">
+                <img src="${item.img}" 
+                     class="prod-img" 
+                     alt="${item.nom}" 
+                     loading="lazy"
+                     onload="this.parentElement.classList.add('loaded')"
+                     onerror="this.src=''">
+            </div>
+            <div class="prod-info">
+                <div>
+                    <h3>${item.nom}</h3>
+                    <p>${item.desc}</p>
                 </div>
-                <div class="prod-info">
-                    <div>
-                        <h3>${item.nom}</h3>
-                        <p>${item.desc}</p>
-                    </div>
-                    <div class="prod-price-row">
-                        <span class="price">Bs. ${item.precio}</span>
-                        <button class="add-btn" onclick="addToCart(${item.id})">AGREGAR</button>
-                    </div>
+                <div class="prod-price-row">
+                    <span class="price">Bs. ${Math.floor(item.precio)}</span>
+                    <button class="add-btn" onclick="addToCart(${item.id})">AGREGAR</button>
                 </div>
             </div>
         `;
+        fragment.appendChild(productCard);
     });
     
-    container.innerHTML = htmlContent;
+    container.appendChild(fragment);
 }
 
 function setupCategoryTabs() {
@@ -311,8 +315,8 @@ function actualizarBarraFlotante() {
     const footer = document.getElementById("footer-cart");
     if (footer) {
         footer.style.display = totalQty > 0 ? "flex" : "none";
-        document.getElementById("cart-qty").innerText = totalQty;
-        document.getElementById("cart-total").innerText = totalPrice;
+        document.getElementById("cart-qty").innerText = Math.floor(totalQty);
+        document.getElementById("cart-total").innerText = Math.floor(totalPrice);
     }
     animateCart();
 }
@@ -333,18 +337,18 @@ function openOrderSummary() {
             <tr>
                 <td class="qty-cell">${item.cantidad}x</td>
                 <td class="name-cell">${item.nom}</td>
-                <td class="price-cell">Bs. ${subtotalItem}</td>
-            <td class="action-cell">
-                <button class="btn-delete" onclick="removeItem(${item.id})" title="Eliminar producto">
-                    <i class="fa-solid fa-trash-can"></i>
-                </button>
-            </td>
+                <td class="price-cell">Bs. ${Math.floor(subtotalItem)}</td>
+                <td class="action-cell">
+                    <button class="btn-delete" onclick="removeItem(${item.id})" title="Eliminar producto">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                </td>
             </tr>
         `;
     });
 
-    subtotalLabel.innerText = total;
-    totalLabel.innerText = total;
+    subtotalLabel.innerText = Math.floor(total);
+    totalLabel.innerText = Math.floor(total);
     document.getElementById("order-modal").style.display = "block";
 }
 
@@ -415,11 +419,12 @@ function confirmarPedido() {
 
     let total = 0;
     cart.forEach((item) => {
-        mensaje += `- ${item.cantidad}x ${item.nom} (Bs. ${item.cantidad * item.precio})\n`;
-        total += item.cantidad * item.precio;
+        const sub = item.cantidad * item.precio;
+        mensaje += `- ${item.cantidad}x ${item.nom} (Bs. ${Math.floor(sub)})\n`;
+        total += sub;
     });
 
-    mensaje += `\n*TOTAL A PAGAR: Bs. ${total}*`;
+    mensaje += `\n*TOTAL A PAGAR: Bs. ${Math.floor(total)}*`;
 
     const numeroWhatsApp = "59177111652";
     const url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=${encodeURIComponent(mensaje)}`;
