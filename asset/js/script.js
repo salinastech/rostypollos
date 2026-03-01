@@ -220,14 +220,21 @@ const menuData = [
 let cart = [];
 
 document.addEventListener("DOMContentLoaded", () => {
-    menuData.forEach(item => {
-        if (item.cat === "Pollos") item.cat = "Pollos";
-    });
-    
     renderMenu("Pollos");
     setupCategoryTabs();
     verificarHorario();
+    
+    const categorias = [...new Set(menuData.map(item => item.cat))];
+    categorias.forEach(c => preloadImages(c));
 });
+
+function preloadImages(categoria) {
+    const filtrados = menuData.filter(item => item.cat === categoria);
+    filtrados.forEach(item => {
+        const img = new Image();
+        img.src = item.img;
+    });
+}
 
 function renderMenu(categoria) {
     const container = document.getElementById("product-list");
