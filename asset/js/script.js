@@ -1,4 +1,3 @@
-// Datos de ejemplo basados en el menú real de Porky's
 const menuData = [
     {
         id: 1,
@@ -452,3 +451,4 @@ function animateCart() {
 }
 
 setInterval(verificarHorario, 60000);
+
