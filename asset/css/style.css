@@ -521,7 +521,7 @@ body {
 }
 
 .btn-delete {
-    background: #fff5f5; /
+    background: #fff5f5; 
     color: #e63946;     
     border: 1px solid #ffcccc;
     border-radius: 8px;
@@ -551,4 +551,5 @@ body {
 }
 
 main { padding-bottom: 100px; }
+
 
