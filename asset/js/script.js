@@ -5,7 +5,7 @@ const menuData = [
         nom: "Economico Broaster",
         desc: "1 Presa de pollo ala o pecho, papas fritas, porcionde arroz.",
         precio: 18,
-        img: "../../images/m1.webp",
+        img: "images/m1.webp",
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ const menuData = [
         nom: "Economico Brasa",
         desc: "1 Presa de pollo pecho o pecho, papas fritas, porcionde arroz.",
         precio: 18,
-        img: "../../images/m2.webp",
+        img: "images/m2.webp",
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ const menuData = [
         nom: "Cuarto Broaster",
         desc: "Cuarto Presa de pollo pecho, papas fritas, porcionde arroz.",
         precio: 28,
-        img: "../../images/m3.webp",
+        img: "images/m3.webp",
     },
     {
         id: 4,
@@ -29,7 +29,7 @@ const menuData = [
         nom: "Cuarto Brasa",
         desc: "Cuarto Presa de pollo pecho, papas fritas, porcionde arroz.",
         precio: 28,
-        img: "../../images/m4.webp",
+        img: "images/m4.webp",
     },
     {
         id: 5,
@@ -37,7 +37,7 @@ const menuData = [
         nom: "Cuarto 3 Presas Broaster",
         desc: "Cuarto 3 Presas de pollo pecho, papas fritas, porcionde arroz.",
         precio: 35,
-        img: "../../images/m5.webp",
+        img: "images/m5.webp",
     },
     {
         id: 6,
@@ -45,7 +45,7 @@ const menuData = [
         nom: "Cuarto 3 Presas Brasa",
         desc: "Pique de res, milanesa de pollo, mozzarella, huevo y papas fritas.",
         precio: 35,
-        img: "../../images/m6.webp",
+        img: "images/m6.webp",
     },
     {
         id: 7,
@@ -53,7 +53,7 @@ const menuData = [
         nom: "Pollo Entero Broaster C/G",
         desc: "Pollo entero.",
         precio: 98,
-        img: "../../images/m7.webp",
+        img: "images/m7.webp",
     },
     {
         id: 8,
@@ -61,7 +61,7 @@ const menuData = [
         nom: "Pollo Entero Brasa C/G",
         desc: "Pollo entero.",
         precio: 98,
-        img: "../../images/m8.webp",
+        img: "images/m8.webp",
     },
     {
         id: 9,
@@ -69,7 +69,7 @@ const menuData = [
         nom: "Pollo Entero Broaster S/G",
         desc: "Pique de res, milanesa de pollo, mozzarella, huevo y papas fritas.",
         precio: 78,
-        img: "../../images/m9.webp",
+        img: "images/m9.webp",
     },
     {
         id: 10,
@@ -77,7 +77,7 @@ const menuData = [
         nom: "Pollo Entero Brasa S/G",
         desc: "Pique de res, milanesa de pollo, mozzarella, huevo y papas fritas.",
         precio: 78,
-        img: "../../images/m10.webp",
+        img: "images/m10.webp",
     },
     {
         id: 11,
@@ -85,7 +85,7 @@ const menuData = [
         nom: "Salchipapa Simple",
         desc: "Rodajas de chorizo, papas fritas,trozos de carne.",
         precio: 18,
-        img: "../../images/m11.webp",
+        img: "images/m11.webp",
     },
     {
         id: 12,
@@ -93,7 +93,7 @@ const menuData = [
         nom: "Salchipapa Super",
         desc: "Rodajas de chorizo, papas fritas,trozos de carne, huevo.",
         precio: 22,
-        img: "../../images/m12.webp",
+        img: "images/m12.webp",
     },
     {
         id: 13,
@@ -101,7 +101,7 @@ const menuData = [
         nom: "Salchipollo Broaster",
         desc: "Presa de pollo, odajas de chorizo, papas fritas,trozos de carne, huevo.",
         precio: 27,
-        img: "../../images/m13.webp",
+        img: "images/m13.webp",
     },
     {
         id: 14,
@@ -109,7 +109,7 @@ const menuData = [
         nom: "Milanesa Clasica",
         desc: "Milanesa de pollo, porción de arroz, platano frito, papas fritas.",
         precio: 20,
-        img: "../../images/m14.webp",
+        img: "images/m14.webp",
     },
     {
         id: 15,
@@ -117,7 +117,7 @@ const menuData = [
         nom: "Hamburguesa Simple",
         desc: "Carne, quezo, tomate, lechuga, cebolla, papas fritas.",
         precio: 18,
-        img: "../../images/m15.webp",
+        img: "images/m15.webp",
     },
     {
         id: 16,
@@ -125,7 +125,7 @@ const menuData = [
         nom: "Hamburguesa Super",
         desc: "Carne, quezo, tomate, lechuga, cebolla, papas fritas.",
         precio: 22,
-        img: "../../images/m16.webp",
+        img: "images/m16.webp",
     },
     {
         id: 17,
@@ -133,7 +133,7 @@ const menuData = [
         nom: "Hamburguesa Doble",
         desc: "Doble carne, doble quezo, tomate, lechuga, cebolla, papas fritas.",
         precio: 26,
-        img: "../../images/m17.webp",
+        img: "images/m17.webp",
     },
     {
         id: 18,
@@ -141,7 +141,7 @@ const menuData = [
         nom: "Hamburguesa Triple",
         desc: "Triple carne, triple quezo, tomate, lechuga, cebolla, papas fritas.",
         precio: 32,
-        img: "../../images/m18.webp",
+        img: "images/m18.webp",
     },
     {
         id: 19,
@@ -149,7 +149,7 @@ const menuData = [
         nom: "Alitas 12 Piezas",
         desc: "Alitas, papas fritas.",
         precio: 35,
-        img: "../../images/m19.webp",
+        img: "images/m19.webp",
     },
     {
         id: 20,
@@ -157,7 +157,7 @@ const menuData = [
         nom: "Salchialitas",
         desc: "Alitas, rodajas de chorizo, papas fritas.",
         precio: 37,
-        img: "../../images/m20.webp",
+        img: "images/m20.webp",
     },
     {
         id: 21,
@@ -165,7 +165,7 @@ const menuData = [
         nom: "2 Alitas 12 Piezas",
         desc: "Alitas, rodajas de chorizo, papas fritas.",
         precio: 57,
-        img: "../../images/m21.webp",
+        img: "images/m21.webp",
     },
     {
         id: 22,
@@ -173,7 +173,7 @@ const menuData = [
         nom: "Pipocas de Pollo",
         desc: "Carne de res, huevo, porción de arroz, papas fritas.",
         precio: 15,
-        img: "../../images/m22.webp",
+        img: "images/m22.webp",
     },
     {
         id: 23,
@@ -181,7 +181,7 @@ const menuData = [
         nom: "Chuleta de Res + Huevo",
         desc: "Pique de res, milanesa de pollo, mozzarella, huevo y papas fritas.",
         precio: 20,
-        img: "../../images/m25.webp",
+        img: "images/m25.webp",
     },
     {
         id: 24,
@@ -189,7 +189,7 @@ const menuData = [
         nom: "Chicharron de pollo",
         desc: "Pipocas de pollo, papas fritas.",
         precio: 20,
-        img: "../../images/m26.webp",
+        img: "images/m26.webp",
     },
     {
         id: 25,
@@ -197,7 +197,7 @@ const menuData = [
         nom: "Porción arroz",
         desc: "Porción arroz Familiar",
         precio: 12,
-        img: "../../images/m27.webp",
+        img: "images/m27.webp",
     },
     {
         id: 26,
@@ -205,7 +205,7 @@ const menuData = [
         nom: "Porción platano",
         desc: "Porción platano Familiar",
         precio: 12,
-        img: "../../images/m28.webp",
+        img: "images/m28.webp",
     },
     {
         id: 27,
@@ -213,7 +213,7 @@ const menuData = [
         nom: "Porción papas",
         desc: "Porción papas Familiar",
         precio: 12,
-        img: "../../images/m29.webp",
+        img: "images/m29.webp",
     },
 ];
 
@@ -230,27 +230,33 @@ function renderMenu(categoria) {
     const title = document.querySelector(".category-title");
 
     if (title) title.innerText = categoria;
+    
+    // Limpiamos el contenedor
     container.innerHTML = "";
 
     const normalize = (text) => text.toLowerCase().trim().replace(/s$/, "");
-
     const filtrados = menuData.filter(
         (item) => normalize(item.cat) === normalize(categoria),
     );
 
     if (filtrados.length === 0) {
-        container.innerHTML = `
-            <div style="text-align:center; width:100%; color: #aaa; padding: 40px 20px;">
-                <i class="fas fa-utensils" style="font-size: 3rem; margin-bottom: 10px;"></i>
-                <p>Próximamente más productos en la categoría ${categoria}</p>
-            </div>`;
+        container.innerHTML = `<p style="text-align:center; padding:20px;">Próximamente...</p>`;
         return;
     }
 
+    let htmlContent = "";
+
     filtrados.forEach((item) => {
-        const itemHtml = `
+        htmlContent += `
             <div class="product-item">
-                <img src="${item.img}" class="prod-img" alt="${item.nom}" onerror="this.src='https://via.placeholder.com/150?text=Rosty+Pollos'">
+                <div class="img-placeholder">
+                    <img src="${item.img}" 
+                         class="prod-img" 
+                         alt="${item.nom}" 
+                         loading="lazy" 
+                         decoding="async"
+                         onerror="this.src=''">
+                </div>
                 <div class="prod-info">
                     <div>
                         <h3>${item.nom}</h3>
@@ -263,8 +269,9 @@ function renderMenu(categoria) {
                 </div>
             </div>
         `;
-        container.innerHTML += itemHtml;
     });
+    
+    container.innerHTML = htmlContent;
 }
 
 function setupCategoryTabs() {
@@ -451,4 +458,3 @@ function animateCart() {
 }
 
 setInterval(verificarHorario, 60000);
-
