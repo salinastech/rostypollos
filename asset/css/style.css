@@ -515,4 +515,40 @@ body {
     }
 }
 
+.action-cell {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn-delete {
+    background: #fff5f5; /
+    color: #e63946;     
+    border: 1px solid #ffcccc;
+    border-radius: 8px;
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+.btn-delete:hover {
+    background: #e63946; 
+    color: white;       
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(230, 57, 70, 0.3);
+}
+
+.btn-delete:active {
+    transform: scale(0.9);
+}
+
+.order-table th, .order-table td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #eee;
+}
+
 main { padding-bottom: 100px; }
+
