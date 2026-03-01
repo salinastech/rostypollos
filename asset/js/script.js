@@ -231,7 +231,6 @@ function renderMenu(categoria) {
 
     if (title) title.innerText = categoria;
     
-    // Limpiamos el contenedor
     container.innerHTML = "";
 
     const normalize = (text) => text.toLowerCase().trim().replace(/s$/, "");
